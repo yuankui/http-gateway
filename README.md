@@ -14,21 +14,34 @@ http-gateway扮演着一个反向代理的角色,但是他可以同时代理多�
 
 ## requirements
 
+- golang
 - mysql-server
 - [godep](https://github.com/tools/godep/)
 
 ## quick start
 
-### bind dns
+### 1.get the source
 
-*.proxy.your.domain -> 127.0.0.1
-
-### start server
 	go get github.com/yuankui/http-gateway
 	cd $GOPATH/src/github.com/yuankui/http-gateway
 	
 	godep restore
-	create database test_db;
+
+### 2. bind dns
+
+	*.proxy.your.domain -> 127.0.0.1
+
+### 3. create database
+
+	mysql -uroot	
+	create database test_proxy;
+	
+### 4. modify config
+
+	vi conf/app.conf	
+
+### 5. start server
+	
 	
 	go build .
 	
