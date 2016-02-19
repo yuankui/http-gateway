@@ -56,7 +56,3 @@ http-gateway扮演着一个反向代理的角色,但是他可以同时代理多�
 	
 - visit `http://localhost:8081` to add backend app
 - visit `http://app_name.proxy.your.domain` to visit the proxied backend app
-
-
-
-
